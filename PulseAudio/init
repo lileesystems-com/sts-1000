@@ -1,0 +1,20 @@
+#!/bin/sh
+
+if [ ! -f /etc/pulse/default.pa ]; then
+    printf "default.pa missing.. recover it.\n"
+    cp /paconfig/default.pa /etc/pulse/default.pa
+fi
+if [ ! -f /etc/pulse/system.pa ]; then
+    printf "system.pa missing.. recover it.\n"
+    cp /paconfig/system.pa /etc/pulse/system.pa
+fi
+if [ ! -f /etc/pulse/client.conf ]; then
+    printf "client.conf missing.. recover it.\n"
+    cp /paconfig/client.conf /etc/pulse/client.conf
+fi
+if [ ! -f /etc/pulse/daemon.conf ]; then
+    printf "daemon.conf missing.. recover it.\n"
+    cp /paconfig/daemon.conf /etc/pulse/daemon.conf
+fi
+
+/usr/bin/dbus-launch --exit-with-session /usr/bin/pulseaudio --fail --disallow-module-loading --disallow-exit --exit-idle-time=-1 -n --file=/etc/pulse/default.pa
