@@ -1,5 +1,5 @@
 # Dockerfile for Pulseaudio
-FROM alpine:3.12
+FROM alpine:3.11
 
 RUN apk add --no-cache \
 	dbus-x11 \

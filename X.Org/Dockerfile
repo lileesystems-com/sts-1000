@@ -1,5 +1,5 @@
 # Dockerfile for Xorg Server
-FROM alpine:3.12
+FROM alpine:3.11
 
 RUN apk add --no-cache xorg-server \
 	xf86-input-keyboard xf86-input-mouse \
