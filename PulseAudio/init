@@ -1,4 +1,10 @@
 #!/bin/sh
+#
+# Copyright (c) 2020 by Lilee Technology, Ltd.
+# All rights reserved.
+#
+# PulseAudio service initialization script.
+#
 
 if [ ! -f /etc/pulse/default.pa ]; then
     printf "default.pa missing.. recover it.\n"
