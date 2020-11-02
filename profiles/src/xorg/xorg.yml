@@ -1,0 +1,13 @@
+version: "2.2"
+services:
+  XORG:
+    image: lileesystems/sts1k-xorg:4.9.2
+    build: .
+    container_name: xorg
+    restart: unless-stopped
+    env_file:
+      - "xorg.env"
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
+    network_mode: none
+    privileged: true

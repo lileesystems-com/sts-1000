@@ -1,0 +1,30 @@
+version: "2.2"
+
+volumes:
+  paconfig:
+    external: true
+    name: paconfig
+
+services:
+  PULSEAUDIO:
+    image: lileesystems/sts1k-pulseaudio:4.9.2
+    build: .
+    container_name: pulseaudio
+    restart: unless-stopped
+    env_file:
+      - "pulseaudio.env"
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
+      - "/tmp/.pulse:/tmp/.pulse"
+      - "paconfig:/etc/pulse"
+      - "/var/lib/pulse:/var/lib/pulse"
+      - "/run/user/0/pulse:/run/user/0/pulse"
+      - "/usr/share/pulseaudio:/usr/share/pulseaudio"
+      - "/var/run/dbus:/var/run/dbus"
+      - "/etc/machine-id:/etc/machine-id"
+      - "/root/.config/pulse:/root/.config/pulse"
+      - "/run/udev:/run/udev"
+      - "/var/run/udev:/var/run/udev"
+    devices:
+      - "/dev/snd:/dev/snd"
+    network_mode: none
