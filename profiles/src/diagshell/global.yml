@@ -1,0 +1,5 @@
+version: "2.2"
+
+networks:
+  access:
+    driver: bridge
