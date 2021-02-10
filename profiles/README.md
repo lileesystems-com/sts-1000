@@ -42,4 +42,4 @@ Name       | State   | Started At
 -----------------------------------------------------
 diagshell   running   2021-02-10T04:31:30.944566921Z
 </pre>
-** Get into the diagshell service (using the packaged credentials and ssh port mapping) - *ssh docker@STS_IP_ADDRESS -p 2222*
+ * Get into the diagshell service (using the packaged credentials and ssh port mapping) - *ssh docker@STS_IP_ADDRESS -p 2222*</br>
