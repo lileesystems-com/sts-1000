@@ -15,8 +15,9 @@
 <pre>
 localhost.localdomain > create application name xorg
 localhost.localdomain > update application name xorg profile package https://github.com/lileesystems-com/sts-1000/raw/master/profiles/xorg.zip
-localhost.localdomain > config application name xorg enable 
+localhost.localdomain > config application name xorg enable
 localhost.localdomain > show application all
+localhost.localdomain > save configuration
 Name       | State   | Started At                    
 -----------------------------------------------------
 xorg         running   2021-02-16T19:34:53.693904601Z
@@ -27,7 +28,8 @@ xorg         running   2021-02-16T19:34:53.693904601Z
 localhost.localdomain > update application storage volume create name paconfig sata 0
 localhost.localdomain > create application name pulseaudio
 localhost.localdomain > update application name pulseaudio profile package https://github.com/lileesystems-com/sts-1000/raw/master/profiles/pulseaudio.zip
-localhost.localdomain > config application name pulseaudio enable 
+localhost.localdomain > config application name pulseaudio enable
+localhost.localdomain > save configuration
 localhost.localdomain > show application all
 Name       | State       | Started At
 -------------------------------------
@@ -39,7 +41,8 @@ xorg         running   2021-02-16T19:34:53.693904601Z
 <pre>
 localhost.localdomain > create application name diagshell
 localhost.localdomain > update application name diagshell profile package https://github.com/lileesystems-com/sts-1000/raw/master/profiles/diagshell.zip
-localhost.localdomain > config application name diagshell enable 
+localhost.localdomain > config application name diagshell enable
+localhost.localdomain > save configuration
 localhost.localdomain > show application all
 Name       | State   | Started At                    
 -----------------------------------------------------
