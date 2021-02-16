@@ -16,8 +16,8 @@
 localhost.localdomain > create application name xorg
 localhost.localdomain > update application name xorg profile package https://github.com/lileesystems-com/sts-1000/raw/master/profiles/xorg.zip
 localhost.localdomain > config application name xorg enable
-localhost.localdomain > show application all
 localhost.localdomain > save configuration
+localhost.localdomain > show application all
 Name       | State   | Started At                    
 -----------------------------------------------------
 xorg         running   2021-02-16T19:34:53.693904601Z
