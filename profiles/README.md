@@ -10,6 +10,18 @@
   ...
   localhost.localdomain > reboot
   </pre>
+
+* **Enabling X.Org service**</br>
+<pre>
+localhost.localdomain > create application name xorg
+localhost.localdomain > update application name xorg profile package https://github.com/lileesystems-com/sts-1000/raw/master/profiles/xorg.zip
+localhost.localdomain > config application name xorg enable 
+localhost.localdomain > show application all
+Name       | State   | Started At                    
+-----------------------------------------------------
+xorg         running   2021-02-16T19:34:53.693904601Z
+</pre>
+
 * **Enabling PulseAudio service**</br>
 <pre>
 localhost.localdomain > update application storage volume create name paconfig sata 0
@@ -19,19 +31,10 @@ localhost.localdomain > config application name pulseaudio enable
 localhost.localdomain > show application all
 Name       | State       | Started At
 -------------------------------------
-pulseaudio   running   2020-11-02T23:21:24.835718155Z
+pulseaudio   running   2021-02-16T19:33:53.796957782Z
+xorg         running   2021-02-16T19:34:53.693904601Z
 </pre>
-* **Enabling X.Org service**</br>
-<pre>
-localhost.localdomain > create application name xorg
-localhost.localdomain > update application name xorg profile package https://github.com/lileesystems-com/sts-1000/raw/master/profiles/xorg.zip
-localhost.localdomain > config application name xorg enable 
-localhost.localdomain > show application all
-Name       | State   | Started At                    
------------------------------------------------------
-pulseaudio   running   2020-11-02T23:21:24.835718155Z
-xorg         running   2020-11-02T23:24:31.728142807Z
-</pre>
+
 * **Enabling DiagShell service**</br>
 <pre>
 localhost.localdomain > create application name diagshell
