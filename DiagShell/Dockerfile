@@ -1,5 +1,5 @@
 # Dockerfile for container diag shell
-FROM ubuntu:18.04
+FROM ubuntu:bionic-20210118
 
 # refer to https://docs.docker.com/engine/install/ubuntu/#install-from-a-package
 # https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/docker-ce-cli_18.09.9~3-0~ubuntu-bionic_amd64.deb
