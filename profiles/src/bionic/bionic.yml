@@ -1,7 +1,7 @@
 version: "2.2"
 services:
   Ubuntu-18.04:
-    image: ubuntu:bionic-20210118
+    image: lileesystems/sts1k-diagshell:4.9.2
     container_name: bionic
     privileged: false
     restart: unless-stopped
