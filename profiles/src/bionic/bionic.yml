@@ -1,0 +1,21 @@
+version: "2.2"
+services:
+  Ubuntu-18.04:
+    image: ubuntu:bionic-20210118
+    container_name: bionic
+    privileged: false
+    restart: unless-stopped
+    mem_limit: 2048m
+    cpus: 1.0
+    env_file:
+      - "bionic.env"
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
+      - "/tmp/.pulse:/tmp/.pulse"
+      - "paconfig:/etc/pulse"
+      - "/var/lib/pulse:/var/lib/pulse"
+      - "/run/user/0/pulse:/run/user/0/pulse"
+    networks:
+      access:
+    ports:
+      - "18422:22/tcp"

@@ -3,7 +3,7 @@
 #
 # Makefile for creating LileeOS container profiles.
 
-subdirs=pulseaudio xorg diagshell
+subdirs=xorg pulseaudio bionic diagshell
 export TARGET=$(shell pwd)/..
 
 all:
