@@ -1,0 +1,10 @@
+version: "2.2"
+
+volumes:
+  paconfig:
+    external: true
+    name: paconfig
+
+networks:
+  access:
+    driver: bridge
