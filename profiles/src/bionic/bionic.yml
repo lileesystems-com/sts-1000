@@ -8,6 +8,7 @@ services:
     mem_limit: 2048m
     cpus: 1.0
     env_file:
+      - "lilee.env"
       - "bionic.env"
     volumes:
       - "/tmp/.X11-unix:/tmp/.X11-unix"
