@@ -2,7 +2,7 @@ version: "2.2"
 
 services:
   Firefox:
-    image: firefox:01
+    image: lileesystems/firefox:4.9.2
     container_name: firefox
     restart: unless-stopped
     env_file:
