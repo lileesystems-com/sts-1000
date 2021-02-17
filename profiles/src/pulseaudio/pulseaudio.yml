@@ -8,7 +8,6 @@ volumes:
 services:
   PULSEAUDIO:
     image: lileesystems/sts1k-pulseaudio:4.9.2
-    build: .
     container_name: pulseaudio
     restart: unless-stopped
     env_file:

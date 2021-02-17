@@ -2,7 +2,6 @@ version: "2.2"
 services:
   XORG:
     image: lileesystems/sts1k-xorg:4.9.2
-    build: .
     container_name: xorg
     restart: unless-stopped
     env_file:
