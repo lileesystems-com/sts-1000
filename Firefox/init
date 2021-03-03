@@ -13,11 +13,6 @@ fi
 # give it a little time to settle
 sleep 10
 
-# disable screen sleep/power saving
-xset dpms 0 0 0
-xset -dpms
-xset s off
-xset s noblank
 # set background black
 xsetroot -solid black
 
@@ -36,13 +31,25 @@ while true ; do
     # wait a bit
     sleep 10
 
+    # get resolution
+    res=$(xrandr --current | grep '*' | uniq | awk '{print $1}')
+    resW=$(echo ${res} | cut -d 'x' -f1)
+    resH=$(echo ${res} | cut -d 'x' -f2)
+    if [ -z "${resW}" -o -z "${resH}" ]; then
+      resW=1920
+      resH=1080
+    fi
     # set window size
-    xwit -resize 1920 1080 -move 0 0
+    xwit -resize ${resW} ${resH} -move 0 0
     # set firefox fullscreen
     xdotool key F11
 
+    # disable screen sleep/power saving
     xset dpms 0 0 0
     xset -dpms
+    xset s 0 0
+    xset s off
+    xset s noblank
     # bring firefox to foreground
     fg
 done
