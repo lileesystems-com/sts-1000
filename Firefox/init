@@ -1,0 +1,46 @@
+#!/bin/bash
+
+URL="$1"
+
+if [ -z "${URL}" ]; then
+  if [ -z "${FIREFOX_URL}" ]; then
+    URL="https://youtube.com"
+  else
+    URL="${FIREFOX_URL}"
+  fi
+fi
+
+# give it a little time to settle
+sleep 10
+
+# disable screen sleep/power saving
+xset dpms 0 0 0
+xset -dpms
+xset s off
+xset s noblank
+# set background black
+xsetroot -solid black
+
+# enable job control
+set -m
+
+# put firefox launcher in a loop
+while true ; do
+    # cleanups
+    kill $(ps -C firefox -o pid=)
+    rm -rf ~/.mozilla
+
+    # start firefox at the background
+    cp ~/all-local.js /usr/lib/firefox/browser/defaults/preferences
+    /usr/bin/firefox  -url "${URL}"  > /dev/null 2>&1 &
+    # wait a bit
+    sleep 10
+
+    # set window size
+    xwit -resize 1920 1080 -move 0 0
+    # set firefox fullscreen
+    xdotool key F11
+
+    # bring firefox to foreground
+    fg
+done

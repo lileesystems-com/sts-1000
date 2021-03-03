@@ -6,8 +6,9 @@ RUN set -eux; \
   apt-get update; \
   apt-get --no-install-recommends install -y \
     pulseaudio pulseaudio-utils \
+    alsa-utils \
     firefox \
-    x11-xserver-utils \
+    x11-xserver-utils xwit xdotool \
     net-tools isc-dhcp-client iputils-ping;
 
 # cleanup
@@ -15,6 +16,9 @@ RUN set -eux;  \
   apt autoremove -y; \
   apt-get clean;
 
-# launch firefox
-CMD ["/usr/bin/firefox"]
+# copy startup script
+ADD init /init
+ADD all-local.js /root/all-local.js
 
+# launch firefox
+CMD ["/init"]
