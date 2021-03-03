@@ -18,7 +18,7 @@ services:
     networks:
       access:
     shm_size: '1gb'
-    entrypoint: /usr/bin/firefox -url https://www.youtube.com
+#    entrypoint: /usr/bin/firefox -url https://www.youtube.com
     cap_add: 
       - NET_ADMIN 
       - NET_BIND_SERVICE 
