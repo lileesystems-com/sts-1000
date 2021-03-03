@@ -41,6 +41,8 @@ while true ; do
     # set firefox fullscreen
     xdotool key F11
 
+    xset dpms 0 0 0
+    xset -dpms
     # bring firefox to foreground
     fg
 done
