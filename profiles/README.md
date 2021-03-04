@@ -20,7 +20,7 @@ localhost.localdomain > save configuration
 localhost.localdomain > show application all
 Name       | State   | Started At                    
 -----------------------------------------------------
-xorg         running   2021-02-16T19:34:53.693904601Z
+xorg         running   2021-02-16T19:33:53.693904601Z
 </pre>
 
 * **Enabling PulseAudio service**</br>
@@ -31,21 +31,22 @@ localhost.localdomain > update application name pulseaudio profile package https
 localhost.localdomain > config application name pulseaudio enable
 localhost.localdomain > save configuration
 localhost.localdomain > show application all
-Name       | State       | Started At
+Name       | State   | Started At                    
 -------------------------------------
-pulseaudio   running   2021-02-16T19:33:53.796957782Z
-xorg         running   2021-02-16T19:34:53.693904601Z
+pulseaudio   running   2021-02-16T19:34:53.796957782Z
+xorg         running   2021-02-16T19:33:53.693904601Z
 </pre>
 
-* **Enabling DiagShell service**</br>
+* **Enabling Firefox service**</br>
 <pre>
-localhost.localdomain > create application name diagshell
-localhost.localdomain > update application name diagshell profile package https://github.com/lileesystems-com/sts-1000/raw/master/profiles/diagshell.zip
-localhost.localdomain > config application name diagshell enable
+localhost.localdomain > create application name firefox
+localhost.localdomain > update application name firefox profile package https://github.com/lileesystems-com/sts-1000/raw/master/profiles/firefox.zip
+localhost.localdomain > config application name firefox enable
 localhost.localdomain > save configuration
 localhost.localdomain > show application all
 Name       | State   | Started At                    
 -----------------------------------------------------
-diagshell   running   2021-02-10T04:31:30.944566921Z
+firefox      running   2021-02-16T19:35:49.485047854Z
+pulseaudio   running   2021-02-16T19:34:53.796957782Z
+xorg         running   2021-02-16T19:33:53.693904601Z
 </pre>
- * Get into the diagshell service (using the packaged credentials and ssh port mapping) - *ssh docker@STS_IP_ADDRESS -p 2222*</br>
