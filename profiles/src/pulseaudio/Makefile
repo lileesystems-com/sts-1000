@@ -3,7 +3,7 @@
 #
 # Makefile for creating LileeOS PulseAudio container service profile
 
-TARGET:=.
+TARGET?=.
 SRC=pulseaudio.env pulseaudio.yml
 target=$(TARGET)/pulseaudio.zip
 

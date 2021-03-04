@@ -3,7 +3,7 @@
 #
 # Makefile for creating LileeOS Container diag shell service profile
 
-TARGET:=.
+TARGET?=.
 SRC=bionic.env bionic.yml global.yml lilee.env
 target=$(TARGET)/bionic.zip
 

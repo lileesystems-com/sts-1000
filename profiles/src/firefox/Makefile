@@ -3,7 +3,7 @@
 #
 # Makefile for creating LileeOS Container diag shell service profile
 
-TARGET:=.
+TARGET?=.
 SRC=firefox.env firefox.yml global.yml
 target=$(TARGET)/firefox.zip
 

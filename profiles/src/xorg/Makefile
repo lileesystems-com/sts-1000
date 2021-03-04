@@ -3,7 +3,7 @@
 #
 # Makefile for creating LileeOS X Server container service profile
 
-TARGET:=.
+TARGET?=.
 SRC=xorg.env xorg.yml
 target=$(TARGET)/xorg.zip
 
