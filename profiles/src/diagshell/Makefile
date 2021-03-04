@@ -3,10 +3,13 @@
 #
 # Makefile for creating LileeOS Container diag shell service profile
 
+TARGET:=.
 SRC=diagshell.env diagshell.yml global.yml
 target=$(TARGET)/diagshell.zip
 
-all: $(SRC)
+all: $(target)
+
+$(target): $(SRC)
 	zip $(target) $(SRC)
 
 clean:
