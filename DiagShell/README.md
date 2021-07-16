@@ -12,7 +12,7 @@
   * user - docker
   * password - ChangePassword!!!
 * **Enabling Diag Shell service**</br>
-  * Refer to the Prerequisite sevction in https://github.com/lileesystems-com/sts-1000/tree/master/profiles
+  * Refer to the Prerequisite sevction in https://github.com/lileetechnology/sts-1000/tree/master/profiles
   * Procedure through STS-1020 LileeOS CLI
   <pre>
   localhost.localdomain > create application name diagshell
