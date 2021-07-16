@@ -14,7 +14,7 @@
 * **Enabling X.Org service**</br>
 <pre>
 localhost.localdomain > create application name xorg
-localhost.localdomain > update application name xorg profile package https://github.com/lileesystems-com/sts-1000/raw/master/profiles/xorg.zip
+localhost.localdomain > update application name xorg profile package https://github.com/lileetechnology/sts-1000/raw/master/profiles/xorg.zip
 localhost.localdomain > config application name xorg enable
 localhost.localdomain > save configuration
 localhost.localdomain > show application all
@@ -27,7 +27,7 @@ xorg         running   2021-02-16T19:33:53.693904601Z
 <pre>
 localhost.localdomain > update application storage volume create name paconfig sata 0
 localhost.localdomain > create application name pulseaudio
-localhost.localdomain > update application name pulseaudio profile package https://github.com/lileesystems-com/sts-1000/raw/master/profiles/pulseaudio.zip
+localhost.localdomain > update application name pulseaudio profile package https://github.com/lileetechnology/sts-1000/raw/master/profiles/pulseaudio.zip
 localhost.localdomain > config application name pulseaudio enable
 localhost.localdomain > save configuration
 localhost.localdomain > show application all
@@ -40,7 +40,7 @@ xorg         running   2021-02-16T19:33:53.693904601Z
 * **Enabling Firefox service**</br>
 <pre>
 localhost.localdomain > create application name firefox
-localhost.localdomain > update application name firefox profile package https://github.com/lileesystems-com/sts-1000/raw/master/profiles/firefox.zip
+localhost.localdomain > update application name firefox profile package https://github.com/lileetechnology/sts-1000/raw/master/profiles/firefox.zip
 localhost.localdomain > config application name firefox enable
 localhost.localdomain > save configuration
 localhost.localdomain > show application all
