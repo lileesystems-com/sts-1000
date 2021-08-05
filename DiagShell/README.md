@@ -4,7 +4,7 @@
 
 * **Prepackaged tools**</br>
   * Ubuntu 18.04 base OS
-  * sshd (mapped to TCP port 2222)
+  * sshd (mapped to TCP port 2222 of STS-1000)
   * docker-ce-cli 18.09.9
   * basic network tools
   * basic ps tool
@@ -12,7 +12,7 @@
   * user - docker
   * password - ChangePassword!!!
 * **Enabling Diag Shell service**</br>
-  * Refer to the Prerequisite sevction in https://github.com/lileesystems-com/sts-1000/tree/master/profiles
+  * Refer to the Prerequisite section in https://github.com/lileesystems-com/sts-1000/tree/master/profiles
   * Procedure through STS-1020 LileeOS CLI
   <pre>
   localhost.localdomain > create application name diagshell
