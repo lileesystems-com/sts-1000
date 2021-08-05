@@ -13,7 +13,7 @@
   * password - ChangePassword!!!
 * **Enabling Diag Shell service**</br>
   * Refer to the Prerequisite section in https://github.com/lileesystems-com/sts-1000/tree/master/profiles
-  * Procedure through STS-1020 LileeOS CLI
+  * Procedure through STS-1000 LileeOS CLI
   <pre>
   localhost.localdomain > create application name diagshell
   localhost.localdomain > update application name diagshell profile package https://github.com/lileesystems-com/sts-1000/raw/master/profiles/diagshell.zip
